@@ -1,0 +1,24 @@
+header{
+    position: sticky;
+    z-index: 999;
+    height: 9.9vh !important;
+}
+
+.logo{
+    width: 14.28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown{
+    margin-right: 15px;
+    border-radius: 5px;
+    padding: 3px;
+    border: none;
+    color: white;
+}
+
+.dropdown:focus{
+    outline: none;
+}

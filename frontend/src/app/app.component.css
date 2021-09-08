@@ -1,0 +1,31 @@
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.content{
+    display: flex;
+}
+
+.content .sidebar{
+    flex: 1;
+    margin-top: 9.9vh;
+}
+
+.content .middle{
+    flex: 6;
+    margin-top: 9.9vh;
+}
+
+.middle footer{
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 14.28%;
+    padding: 7px;
+    background-color: white;
+}

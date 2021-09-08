@@ -1,0 +1,42 @@
+.add-new-std{
+    padding: 40px;
+    z-index: 99;
+    position: absolute;
+    background-color: white;
+    top: 12%;
+    left: 30%;
+    right: 20%;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.5);
+    /* visibility: hidden; */
+}
+
+.stdView{
+    visibility: visible;
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.address{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.address input{
+    width: 50% !important;
+}
+
+.input input{
+    width: 70%;
+}
+
+.error{
+    background-color: rgb(255, 255, 160);
+    padding: 0.5em;
+}

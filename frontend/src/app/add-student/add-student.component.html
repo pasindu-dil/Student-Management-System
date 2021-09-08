@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="add-new-std" id="add-new-std">
+        <h6 style="margin-bottom: 25px;">Add New Student</h6>
+        <div *ngIf = "enableerr == true">
+            <p  class="error" *ngIf = "errmsg == true">Successfully saved !</p>
+            <p  class="error" *ngIf = "errmsg == false">Something went wrong. Please try again !</p>
+        </div>
+        <form class="form form-group" [formGroup] = "addnewForm" (ngSubmit) = "onSubmit()">
+            <div class="input">
+                <label>NIC :</label>
+                <input type="text" placeholder="Enter NIC..." formControlName = "nic">
+            </div>
+            <div class="input">
+                <label>Name with initials :</label>
+                <input type="text" placeholder="Ex : K.P.Kumara" formControlName = "namewithinit">
+            </div>
+            <div class="input">
+                <label>Full Name :</label>
+                <input type="text" placeholder="Ex : Kamal Priyantha Kumara" formControlName = "fullname">
+            </div>
+            <div class="input">
+                <label>Address :</label>
+                <div class="address">
+                    <input type="text" placeholder="Address Line 1" formControlName = "addressline1" style="margin-right: 10px;">
+                    <input type="text" placeholder="Address Line 2" formControlName = "addressline2">
+                </div>
+            </div>
+            <div class="input">
+                <label>City :</label>
+                <input type="text" placeholder="Enter your city..." formControlName = "city">
+            </div>
+            <div class="input">
+                <label>School :</label>
+                <input type="text" placeholder="Enter your school..." formControlName = "school">
+            </div>
+            <div class="input">
+                <label>Profile Photo :</label>
+                <input type="file" formControlName = "image">
+            </div>
+            
+        </form>
+        
+        <div class="input">
+            <button class="btn btn-danger" (click) = "btnBack()">Back</button>
+            <form class="form-btn" [formGroup] = "addnewForm" (ngSubmit) = "onSubmit()">
+                <button style="margin-right: 10px;" class="btn btn-success" type="submit">Submit</button>
+                <button class="btn btn-primary" (click) = "btnReset()" type="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>

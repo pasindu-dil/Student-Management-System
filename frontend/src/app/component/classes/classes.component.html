@@ -1,0 +1,51 @@
+<div class="wrapper" style="min-height: 85vh;">
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center; text-align: left; margin: 12px;">
+        <div class="title">
+            <h5>{{title}}</h5>
+        </div>
+        <div class="options">
+            <button style="font-size: 14px;" type="button" class="btn btn-success">Add new</button>
+        </div>
+    </div>
+    <hr>
+
+    <div class="table" style="padding: 15px; background-color:white;">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>
+                        Profile
+                    </th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Class</th>
+                    <th>Date joined</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody *ngIf = "data == false">
+                <tr>
+                    <td colspan="7">
+                        No classes to show data... <br>
+                    <button style="font-size: 14px;" type="button" class="btn btn-success">Add</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody *ngIf = "data == true">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-success">Update</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

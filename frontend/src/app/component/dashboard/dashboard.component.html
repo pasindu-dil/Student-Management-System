@@ -1,0 +1,203 @@
+<div class="wrapper">
+    <div class="menu-bar">
+        <div class="option">
+            <span><img style="width: 30px; height: 30px; margin-right: 8px;" [src]="mbImg1" alt=""></span>
+            <a (click)="addnewStdView()">Add New Student</a>
+        </div>
+        <div class="option">
+            <a>Add New Class</a>
+        </div>
+        <div class="option">
+            <a>Schedule New Exam</a>
+        </div>
+        <div class="option">
+            <a>Make Payments</a>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="sub-grid">
+            <div class="std">
+                <div class="img">
+                    <img style="width: 60px; height: 60px;" [src]="stdImage" alt="">
+                </div>
+                <div class="detail">
+                    <h3>{{students.length}}</h3>
+                    Student
+                </div>
+            </div>
+            <div class="teachers">
+                <div class="img">
+                    <img style="width: 60px; height: 60px;" [src]="stdImage" alt="">
+                </div>
+                <div class="detail">
+                    <h3>8</h3>
+                    Teacher
+                </div>
+            </div>
+            <div class="classes">
+                <div class="img">
+                    <img style="width: 60px; height: 60px;" [src]="stdImage" alt="">
+                </div>
+                <div class="detail">
+                    <h3>9</h3>
+                    Classes
+                </div>
+            </div>
+            <div class="exams">
+                <div class="img">
+                    <img style="width: 60px; height: 60px;" [src]="stdImage" alt="">
+                </div>
+                <div class="detail">
+                    <h3>3</h3>
+                    Exams
+                </div>
+            </div>
+        </div>
+
+        <div class="chart" style="padding: 8px;">
+            <p class="title">2021 Account Summary</p>
+            <p>Click month income or expense column to view day wise account summary.</p>
+            <hr>
+        </div>
+
+        <div class="new-members" style="padding: 0 5px;">
+            <h6 style="margin-top: 12px;">New Join Members</h6>
+            <hr style="margin: 0; padding: 0;">
+            <div class="members">
+                <div class="img">
+                    <img style="border-radius: 50%; width: 60px; height: 60px;" [src]="image" alt="">
+                </div>
+                <div class="text" style="margin: 0 5px;">
+                    <h6 style="margin: 0; padding-top: 1em;">Supeshala Madhushani</h6>
+                    <p style="font-size: 14px;">Software Engineer</p>
+                </div>
+                <div class="button">
+                    <button class="btn btn-primary">Display</button>
+                </div>
+            </div>
+            <div class="members">
+                <div class="img">
+                    <img style="border-radius: 50%; width: 60px; height: 60px;" [src]="image" alt="">
+                </div>
+                <div class="text" style="margin: 0 5px;">
+                    <h6 style="margin: 0; padding-top: 1em;">Supeshala Madhushani</h6>
+                    <p style="font-size: 14px;">Software Engineer</p>
+                </div>
+                <div class="button">
+                    <button class="btn btn-primary">Display</button>
+                </div>
+            </div>
+            <div class="members">
+                <div class="img">
+                    <img style="border-radius: 50%; width: 60px; height: 60px;" [src]="image" alt="">
+                </div>
+                <div class="text" style="margin: 0 5px;">
+                    <h6 style="margin: 0; padding-top: 1em;">Supeshala Madhushani</h6>
+                    <p style="font-size: 14px;">Software Engineer</p>
+                </div>
+                <div class="button">
+                    <button class="btn btn-primary">Display</button>
+                </div>
+            </div>
+            <div class="members">
+                <div class="img">
+                    <img style="border-radius: 50%; width: 60px; height: 60px;" [src]="image" alt="">
+                </div>
+                <div class="text" style="margin: 0 5px;">
+                    <h6 style="margin: 0; padding-top: 1em;">Supeshala Madhushani</h6>
+                    <p style="font-size: 14px;">Software Engineer</p>
+                </div>
+                <div class="button">
+                    <button class="btn btn-primary">Display</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="data-table" style="padding: 10px;">
+            <table class="table table-responsive" style="text-align: left !important;">
+                <h5>Latest Changes</h5>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left; align-items: center;">
+                            <img style="width: 40px; height: 40px; border-radius: 50%;" [src]="image" alt="">
+                        </td>
+                        <td>B.Supeshala Madhushani</td>
+                        <td>0756563017</td>
+                        <td>Rs : 1200.00</td>
+                        <td>2017-12-04</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; align-items: center;">
+                            <img style="width: 40px; height: 40px; border-radius: 50%;" [src]="image" alt="">
+                        </td>
+                        <td>B.Supeshala Madhushani</td>
+                        <td>0756563017</td>
+                        <td>Rs : 1200.00</td>
+                        <td>2017-12-04</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; align-items: center;">
+                            <img style="width: 40px; height: 40px; border-radius: 50%;" [src]="image" alt="">
+                        </td>
+                        <td>B.Supeshala Madhushani</td>
+                        <td>0756563017</td>
+                        <td>Rs : 1200.00</td>
+                        <td>2017-12-04</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="empty"></div>
+    </div>
+
+    <div class="add-new-std" id="add-new-std">
+        <h6 style="margin-bottom: 25px;">Add New Student</h6>
+        <div *ngIf = "enableerr == true">
+            <p  class="error" *ngIf = "errmsg == true">Successfully saved !</p>
+            <p  class="error" *ngIf = "errmsg == false">Something went wrong. Please try again !</p>
+        </div>
+        <form class="form form-group" [formGroup] = "addnewForm" (ngSubmit) = "onSubmit()">
+            <div class="input">
+                <label>NIC :</label>
+                <input type="text" placeholder="Enter NIC..." formControlName = "nic">
+            </div>
+            <div class="input">
+                <label>Name with initials :</label>
+                <input type="text" placeholder="Ex : K.P.Kumara" formControlName = "namewithinit">
+            </div>
+            <div class="input">
+                <label>Full Name :</label>
+                <input type="text" placeholder="Ex : Kamal Priyantha Kumara" formControlName = "fullname">
+            </div>
+            <div class="input">
+                <label>Address :</label>
+                <div class="address">
+                    <input type="text" placeholder="Address Line 1" formControlName = "addressline1" style="margin-right: 10px;">
+                    <input type="text" placeholder="Address Line 2" formControlName = "addressline2">
+                </div>
+            </div>
+            <div class="input">
+                <label>City :</label>
+                <input type="text" placeholder="Enter your city..." formControlName = "city">
+            </div>
+            <div class="input">
+                <label>School :</label>
+                <input type="text" placeholder="Enter your school..." formControlName = "school">
+            </div>
+            <div class="input">
+                <label>Profile Photo :</label>
+                <input type="file" formControlName = "image">
+            </div>
+            
+        </form>
+        
+        <div class="input">
+            <button class="btn btn-danger" (click) = "btnBack()">Back</button>
+            <form class="form-btn" [formGroup] = "addnewForm" (ngSubmit) = "onSubmit()">
+                <button style="margin-right: 10px;" class="btn btn-success" type="submit">Submit</button>
+                <button class="btn btn-primary" (click) = "btnReset()" type="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>

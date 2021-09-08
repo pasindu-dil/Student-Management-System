@@ -1,0 +1,50 @@
+<div class="wrapper" style="min-height: 85vh;">
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center; text-align: left; margin: 12px;">
+        <div class="title">
+            <h5>{{title}}</h5>
+        </div>
+        <div class="options">
+            <button (click) = "addnew()" style="font-size: 14px;" type="button" class="btn btn-success">Add new</button>
+        </div>
+    </div>
+    <hr>
+
+    <div class="table" style="padding: 15px; background-color:white;">
+        <table class="table table-responsive" style="text-align: left;">
+            <thead>
+                <tr>
+                    <th>
+                        NIC No
+                    </th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>School</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody *ngIf = "students.length == 0">
+                <tr style="text-align: center;">
+                    <td colspan="6">
+                        No students to show data... <br>
+                    <button style="font-size: 14px;" type="button" (click) = "addnew()" class="btn btn-success">Add</button>
+                    
+                    </td>
+                </tr>
+            </tbody>
+            <tbody *ngIf = "students.length > 0">
+                <tr *ngFor = "let student of students">
+                    <td>{{student.nic}}</td>
+                    <td>{{student.namewithinit}}</td>
+                    <td style="width: 300px;">{{student.addressline1}},{{student.addressline2}},{{student.city}}</td>
+                    <td>{{student.school}}</td>
+                    <td>Active</td>
+                    <td style="width: 200px;">
+                        <button style="margin-right: 15px; font-size: 14px;" class="btn btn-success">Update</button>
+                        <button (click) = "deleteStudent()" style="font-size: 14px;" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,203 @@
+.wrapper{
+    height: 90vh !important;
+    background-color: rgb(206, 238, 238);
+}
+
+.menu-bar{
+    display: flex;
+    background-color: rgb(13, 168, 13);
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar .option{
+    margin: 0 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar .option a{
+    color: white;
+    font-weight: 400;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.main-grid{
+    display: grid;
+    grid-column-gap: 2em;
+    grid-row-gap: 1em;
+    margin: 15px 15px;
+}
+
+.main-grid .sub-grid{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+}
+
+.main-grid .std{
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+    background-color: white;
+    border-radius: 1em;
+}
+
+.main-grid .teachers{
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+    background-color: white;
+    border-radius: 1em;
+}
+
+.main-grid .classes{
+    /* grid-column-start: 3;
+    grid-column-end: 4; */
+    background-color: white;
+    border-radius: 1em;
+}
+
+.main-grid .exams{
+    /* grid-column-start: 4;
+    grid-column-end: 5; */
+    background-color: white;
+    border-radius: 1em;
+}
+
+.main-grid .chart{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: white;
+    border-radius: 1em;
+    height: 350px;
+}
+
+.main-grid .new-members{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.main-grid .data-table{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.main-grid .empty{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    border-radius: 1em;
+    height: 28px;
+}
+
+.main-grid .std,
+.main-grid .teachers,
+.main-grid .classes,
+.main-grid .exams{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-grid .std .detail,
+.main-grid .teachers .detail,
+.main-grid .classes .detail,
+.main-grid .exams .detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+}
+
+.main-grid .std .img,
+.main-grid .teachers .img,
+.main-grid .classes .img,
+.main-grid .exams .img{
+    width: 40%;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-grid .std .img{
+    background-color: rgba(255, 0, 0, 0.8);
+}
+.main-grid .teachers .img{
+    background-color: rgba(138, 43, 226, 0.8);
+}
+.main-grid .classes .img{
+    background-color: rgba(0, 128, 0, 0.8);
+}
+.main-grid .exams .img{
+    background-color: rgba(255, 165, 0, 0.8);
+}
+
+.main-grid .chart p:first-child{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main-grid .chart p{
+    font-size: 14px;
+    margin: 0;
+}
+
+.new-members .members{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+.add-new-std{
+    padding: 40px;
+    z-index: 99;
+    position: absolute;
+    background-color: white;
+    top: 20%;
+    left: 30%;
+    right: 20%;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+.stdView{
+    visibility: visible;
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.address{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.address input{
+    width: 50% !important;
+}
+
+.input input{
+    width: 70%;
+}
+
+.error{
+    background-color: rgb(255, 255, 160);
+    padding: 0.5em;
+}
